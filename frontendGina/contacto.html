@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <main>
+    <!--Parte del header(seccion que tiene nuesttro nombre, logotipo, eslogan, etc)-->
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <a href="#inicio" class="logo">
+                    <div class="logo-icon">
+                         <img src="images/logo.png" alt="PC"> 
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">ProgCert</span>
+                        <span class="logo-slogan">Porgramador certificado, futuro asegurado</span>
+                    </div>
+                </a>
+            </div>
+            <!--Lista para mostrar las secciones de la pagina-->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="certificaciones.html">Certificaciones</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li id="usuarioLogueado"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-contacto">
+        <div class="hero-content">
+            <h1>¿Tienes alguna duda?</h1>
+            <p>Estamos aquí para ayudarte. Envíanos tu mensaje y te responderemos lo antes posible.</p>
+        </div>
+    </section>
+
+    
+    <section class="contacto-section">
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h2>📧 Contáctanos</h2>
+                <p>Completa el formulario y nos pondremos en contacto contigo pronto.</p>
+                
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Aguascalientes, México</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contacto@progcert.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes: 8:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-form-wrapper">
+                <form id="contactoForm" class="contacto-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            placeholder="Miguel Zavala" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input 
+                            type="email" 
+                            id="correo" 
+                            name="correo" 
+                            placeholder="ejemplo@correo.com" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Tu Pregunta o Duda</label>
+                        <textarea 
+                            id="mensaje" 
+                            name="mensaje" 
+                            rows="6" 
+                            placeholder="Escribe tu mensaje aquí..." 
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ProgCert. Todos los derechos reservados.</p>
+            <p>Desarrollado por estudiantes de ISC 5°A</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/progcert_?igsh=OHFwZHJ0MHMwM3Z4" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    </main>
+</body>
+</html>

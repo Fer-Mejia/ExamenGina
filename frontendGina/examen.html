@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Examen de Certificación</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <main>
+    <header id="header">
+      <nav>
+        <div class="logo-container">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+               <img src="images/logo.png" alt="PC"> 
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">ProgCert</span>
+              <span class="logo-slogan">Programador certificado, futuro asegurado</span>
+            </div>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="examen-container">
+      <h1>Examen de Certificación en Java</h1>
+      <p id="infoUsuario" class="info-usuario"></p>
+      <form id="formExamen" class="form-examen"></form>
+      <div class="botones-examen">
+        <button id="btnEnviar" class="btn-enviar">Enviar respuestas</button>
+        <button id="btnCertificado" class="btn-certificado" style="display:none;">Descargar certificado</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const token = localStorage.getItem("token");
+      const nombre = localStorage.getItem("nombre");
+      const usuario = localStorage.getItem("usuario");
+      const preguntasGuardadas = JSON.parse(localStorage.getItem("examen"));
+
+      if (!token || !usuario) {
+        Swal.fire("Acceso denegado", "Debes iniciar sesión para presentar el examen", "error").then(() => {
+          window.location.href = "index.html";
+        });
+        return;
+      }
+
+      if (!preguntasGuardadas || preguntasGuardadas.length === 0) {
+        Swal.fire("Error", "No hay examen cargado. Regresa y vuelve a iniciar.", "error").then(() => {
+          window.location.href = "certificaciones.html";
+        });
+        return;
+      }
+
+      document.getElementById("infoUsuario").innerText = `Usuario: ${nombre} | Fecha: ${new Date().toLocaleDateString("es-MX")}`;
+
+      const form = document.getElementById("formExamen");
+      preguntasGuardadas.forEach((pregunta, index) => {
+        const div = document.createElement("div");
+        div.classList.add("pregunta");
+
+        div.innerHTML = `
+          <h3>${pregunta.numero}. ${pregunta.pregunta}</h3>
+          ${pregunta.opciones.map(opcion => `
+            <label>
+              <input type="radio" name="pregunta${index}" value="${opcion}" required />
+              ${opcion}
+            </label>
+          `).join("")}
+        `;
+
+        form.appendChild(div);
+      });
+
+      document.getElementById("btnEnviar").addEventListener("click", async () => {
+        const respuestas = [];
+        const preguntas = document.querySelectorAll(".pregunta");
+
+        preguntas.forEach((div, index) => {
+          const seleccionada = div.querySelector(`input[name="pregunta${index}"]:checked`);
+          respuestas.push(seleccionada ? seleccionada.value : null);
+        });
+
+        try {
+          const response = await fetch("http://192.168.1.81:3000/api/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`
+            },
+            body: JSON.stringify({ respuestas })
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) {
+            Swal.fire("Error", data.mensaje, "error");
+            return;
+          }
+
+          Swal.fire("Resultado", `${data.mensaje}\nCalificación: ${data.calificacion.toFixed(2)}%`, data.aprobado ? "success" : "info");
+
+          if (data.aprobado) {
+            document.getElementById("btnCertificado").style.display = "inline-block";
+          } else {
+            setTimeout(() => {
+              window.location.href = "certificaciones.html";
+            }, 3000);
+          }
+
+        } catch (error) {
+          Swal.fire("Error", "No se pudo enviar el examen", "error");
+        }
+      });
+
+      document.getElementById("btnCertificado").addEventListener("click", async () => {
+        try {
+          const response = await fetch("http://192.168.1.81:3000/api/pdf", {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
+
+          if (!response.ok) {
+            const data = await response.json();
+            Swal.fire("Error", data.mensaje || "No autorizado para generar certificado", "error");
+            return;
+          }
+
+          const blob = await response.blob();
+          const url = URL.createObjectURL(blob);
+          window.open(url, "_blank");
+
+        } catch (error) {
+          Swal.fire("Error", "No se pudo generar el certificado", "error");
+        }
+      });
+    });
+  </script>
+
+   <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ProgCert. Todos los derechos reservados.</p>
+            <p>Desarrollado por estdiantes de ISC 5°A</p>
+            <div class="redes">
+            <a href="https://www.instagram.com/progcert_?igsh=OHFwZHJ0MHMwM3Z4" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

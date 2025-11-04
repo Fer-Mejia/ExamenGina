@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <main>
+    <!--Parte del header(seccion que tiene nuesttro nombre, logotipo, eslogan, etc)-->
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <a href="#inicio" class="logo">
+                    <div class="logo-icon">
+                       <img src="images/logo.png" alt="PC"> 
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">ProgCert</span>
+                        <span class="logo-slogan">Porgramador certificado, futuro asegurado</span>
+                    </div>
+                </a>
+            </div>
+            <!--Lista para mostrar las secciones de la pagina-->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="certificaciones.html">Certificaciones</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="usuarioLogueado"></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <!--Seccion de inicio sobre info de Nosotros-->
+    <section class="hero-nosotros">
+        <div class="hero-content">
+            <h1>ProgCert</h1>
+            <p>Transformando desarrolladores en personal certificado desde 2020</p>
+        </div>
+    </section>
+    <!--Section de la historia de la empresa-->
+    <section class="historia">
+        <div class="historia-content">
+            <h2>Nuestra Historia</h2>
+            <div class="historia-texto">
+                <p>
+                    <strong>Todo comenzó en marzo de 2020</strong>, cuando el mundo enfrentaba uno de sus momentos más 
+                    difíciles. La pandemia no solo paralizó ciudades, sino que devastó la economía global. En México, 
+                    millones de personas perdieron sus empleos y el futuro parecía incierto.
+                </p>
+                <p>
+                    En Aguascalientes, tres estudiantes de Ingeniería en Sistemas Computacionales de la UAA
+                    — <strong>Fernanda Mejía, Eliseo Villalobos y Miguel Zavala</strong> — observaban cómo 
+                    sus compañeros, amigos y familiares luchaban por encontrar oportunidades laborales. Las empresas 
+                    cerraban, pero ellos notaron algo: <em>el sector tecnológico seguía creciendo</em>.
+                </p>
+                <p>
+                    "Las empresas necesitaban programadores que pudieran trabajar desde casa", recuerda Fernanda. 
+                    "Pero había un problema: muchas personas querían aprender a programar, pero las empresas no confiaban 
+                    en candidatos sin certificaciones o experiencia comprobable."
+                </p>
+                <p>
+                    Fue entonces cuando surgió la idea. <strong>¿Y si creaban una plataforma que certificara las habilidades 
+                    técnicas de forma accesible y confiable?</strong> Una plataforma donde cualquier persona, sin importar 
+                    su situación económica o ubicación, pudiera demostrar su conocimiento en programación y mejorar sus 
+                    oportunidades laborales.
+                </p>
+                <p>
+                    Trabajando desde sus casas durante el confinamiento, con videollamadas nocturnas y mucho café, 
+                    los tres fundadores desarrollaron el primer prototipo de <strong>ProgCert</strong> en solo 4 meses. 
+                    Lo que comenzó como un proyecto de tesis se convirtió en una misión: 
+                    <em>"Democratizar el acceso a certificaciones profesionales en programación"</em>.
+                </p>
+                <p>
+                    En octubre de 2020, lanzaron la plataforma con solo 5 certificaciones: Java, Node.js, HTML, 
+                    Y Python. En el primer mes, certificaron a 23 desarrolladores. Para finales de 2021, 
+                    ya habían emitido más de 500 certificaciones.
+                </p>
+                <p>
+                    Hoy, cinco años después, <strong>ProgCert ha certificado a más de 5,000 desarrolladores</strong> 
+                    en 22 tecnologías diferentes. Nuestros certificados son reconocidos por más de 150 empresas en 
+                    México y Latinoamérica, y el 95% de nuestros certificados encuentran empleo en los primeros 6 meses.
+                </p>
+                <p>
+                    Lo que inició como una respuesta a una crisis se convirtió en una plataforma que transforma vidas. 
+                    Cada certificado que emitimos no es solo un documento digital — <strong>es una puerta que se abre 
+                    hacia un mejor futuro</strong>.
+                </p>
+                <blockquote class="historia-quote">
+                    "No creamos ProgCert solo para sobrevivir la pandemia. Lo creamos para que miles de personas 
+                    pudieran no solo sobrevivir, sino prosperar en el mundo digital."
+                    <cite>— Miguel Zavala, CEO y Co-fundador</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!-- Section Mision, Vision, Valores -->
+    <section class="mision-vision">
+        <div class="mvv-grid">
+            <div class="mvv-card">
+                <div class="mvv-icon">🎯</div>
+                <h3>Misión</h3>
+                <p>
+                    Proporcionar certificaciones accesibles y de alta calidad que validen las habilidades 
+                    técnicas de desarrolladores, facilitando su crecimiento profesional y mejorando su 
+                    competitividad en el mercado laboral tecnológico.
+                </p>
+            </div>
+
+            <div class="mvv-card">
+                <div class="mvv-icon">🚀</div>
+                <h3>Visión</h3>
+                <p>
+                    Ser la plataforma de certificaciones en programación más reconocida y confiable de 
+                    Latinoamérica para 2030, ayudando a más de 100,000 desarrolladores a alcanzar sus 
+                    metas profesionales.
+                </p>
+            </div>
+
+            <div class="mvv-card">
+                <div class="mvv-icon">💎</div>
+                <h3>Valores</h3>
+                <ul>
+                <li><strong>Excelencia:</strong> Contenido actualizado y de máxima calidad</li>
+                <li><strong>Accesibilidad:</strong> Certificaciones al alcance de todos</li>
+                <li><strong>Integridad:</strong> Evaluaciones justas y transparentes</li>
+                <li><strong>Innovación:</strong> Mejora continua de nuestra plataforma</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Seccion de disntincion a la competencia-->
+    <section class="nos-distingue">
+        <div class="distingue-content">
+            <h2>Lo que Nos Hace Diferentes</h2>
+            <p class="distingue-subtitle">No somos solo otra plataforma de certificaciones. Somos una familia con una misión.</p>
+            
+            <div class="distingue-hero">
+                <div class="distingue-texto">
+                    <h3>💙 Programamos con el Corazón</h3>
+                    <p>
+                        Mientras otras plataformas ven números y transacciones, nosotros vemos <strong>historias de vida</strong>. 
+                        Vemos a la madre soltera que está aprendiendo Java para darles un mejor futuro a sus hijos. 
+                        Vemos al joven de provincia que no puede pagar una universidad cara, pero tiene talento y determinación. 
+                        Vemos familias que la pandemia dejó sin empleo, buscando una nueva oportunidad.
+                    </p>
+                    <p>
+                        <strong>Eso nos distingue:</strong> nunca olvidamos por qué empezamos. ProgCert nació porque vimos a 
+                        familias enteras destruidas por el desempleo, y supimos que la programación podía ser el salvavidas 
+                        que necesitaban. No lo hicimos por dinero — <em>lo hicimos porque era lo correcto</em>.
+                    </p>
+                </div>
+                <div class="distingue-imagen">
+                    <img src="images/equipo.jpg" alt="Equipo ProgCert trabajando con pasión">
+                </div>
+            </div>
+
+            <!-- Grid de diferenciadores -->
+            <div class="diferenciadores-grid">
+                <div class="diferenciador-card destacado">
+                    <div class="diferenciador-icon">❤️</div>
+                    <h4>Pasión Genuina por la Programación</h4>
+                    <p>
+                        No somos empresarios que vieron una oportunidad de negocio. Somos <strong>programadores apasionados</strong> 
+                        que vivieron la crisis del 2020, que sintieron la angustia del desempleo en carne propia, y que decidieron 
+                        usar sus conocimientos para ayudar a otros. Cada línea de código de nuestra plataforma fue escrita 
+                        con la convicción de que estábamos salvando empleos, salvando familias.
+                    </p>
+                </div>
+
+                <div class="diferenciador-card">
+                    <div class="diferenciador-icon">🤝</div>
+                    <h4>Compromiso Real con Tu Éxito</h4>
+                    <p>
+                        Para nosotros, cada certificado emitido es personal. <strong>Celebramos cada aprobación</strong> como si 
+                        fuera nuestra propia victoria, porque sabemos que detrás de ese certificado hay una familia que respirará 
+                        tranquila, un sueño que se cumple, una vida que cambia. No nos importa solo que pagues el examen — 
+                        nos importa que lo apruebes y consigas ese trabajo que mereces.
+                    </p>
+                </div>
+
+                <div class="diferenciador-card">
+                    <div class="diferenciador-icon">🌱</div>
+                    <h4>Precios Justos, No Lucro Excesivo</h4>
+                    <p>
+                        Mientras otras plataformas cobran miles de pesos por certificaciones, nosotros mantenemos 
+                        <strong>precios accesibles</strong> porque entendemos que quien más necesita certificarse es quien 
+                        menos tiene. Nuestro modelo de negocio prioriza el impacto social sobre las ganancias. 
+                        Si tuviéramos que elegir entre certificar a 10 personas pagando mucho o 100 pagando poco, 
+                        elegimos las 100 vidas transformadas.
+                    </p>
+                </div>
+
+                <div class="diferenciador-card">
+                    <div class="diferenciador-icon">🎓</div>
+                    <h4>Educación, No Solo Evaluación</h4>
+                    <p>
+                        No te dejamos solo con un examen. Entendemos que muchos están aprendiendo por cuenta propia, 
+                        sin maestros ni recursos. Por eso, cada certificación incluye <strong>recursos de estudio gratuitos, 
+                        guías y ejemplos</strong>. Queremos que apruebes, no que falles. Tu éxito es nuestro éxito.
+                    </p>
+                </div>
+
+                <div class="diferenciador-card">
+                    <div class="diferenciador-icon">🏠</div>
+                    <h4>Origen Humilde, Visión Grande</h4>
+                    <p>
+                        Empezamos en cuartos de casa durante el confinamiento, con laptops viejas y muchos sueños. 
+                        <strong>No teníamos inversores ni presupuestos millonarios</strong> — teníamos pasión y la certeza 
+                        de que podíamos hacer la diferencia. Esa esencia humilde nunca la perdimos. Seguimos siendo los 
+                        mismos tres programadores que creen que el conocimiento puede cambiar el mundo.
+                    </p>
+                </div>
+
+                <div class="diferenciador-card">
+                    <div class="diferenciador-icon">🔥</div>
+                    <h4>Innovación con Propósito</h4>
+                    <p>
+                        Cada actualización de nuestra plataforma, cada nueva certificación que lanzamos, lo hacemos 
+                        preguntándonos: <em>"¿Esto ayudará a alguien a conseguir empleo?"</em>. No agregamos tecnologías 
+                        porque están de moda — las agregamos porque el mercado las demanda y <strong>nuestros usuarios 
+                        las necesitan para ser contratados</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mensaje motivacional para convencer-->
+            <div class="mensaje-final">
+                <div class="mensaje-contenido">
+                    <h3>La Programación Salvó Nuestras Vidas... Y Puede Salvar la Tuya</h3>
+                    <p>
+                        En 2020, cuando el mundo se detuvo, la programación nos dio esperanza. Nos dio propósito. 
+                        Nos permitió ayudar a nuestra familia, a nuestros amigos, a desconocidos que se convertirían 
+                        en nuestra comunidad.
+                    </p>
+                    <p>
+                        Hoy, esa misma programación que nos salvó puede salvarte a ti. No importa si estás empezando, 
+                        si tienes 18 o 50 años, si vives en una gran ciudad o en un pueblo pequeño. 
+                        <strong>Si tienes la voluntad de aprender, nosotros tenemos las herramientas para certificarte</strong>.
+                    </p>
+                    <p class="mensaje-destacado">
+                        Eso es lo que nos distingue de la competencia: <strong>ellos venden certificados, 
+                        nosotros transformamos vidas</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Estadisticas de impacto -->
+            <div class="impacto-social">
+                <h3>Nuestro Impacto Real</h3>
+                <div class="impacto-grid">
+                    <div class="impacto-item">
+                        <span class="impacto-numero">5,000+</span>
+                        <p>Familias beneficiadas con empleo</p>
+                    </div>
+                    <div class="impacto-item">
+                        <span class="impacto-numero">40%</span>
+                        <p>De nuestros usuarios son autodidactas</p>
+                    </div>
+                    <div class="impacto-item">
+                        <span class="impacto-numero">$150M</span>
+                        <p>MXN generados en salarios nuevos</p>
+                    </div>
+                    <div class="impacto-item">
+                        <span class="impacto-numero">18</span>
+                        <p>Estados de México alcanzados</p>
+                    </div>
+                </div>
+            </div>
+            <!--Generar motivacion-->
+            
+            <div class="cta-distingue">
+                <h3>Únete a una Comunidad que Cree en Ti</h3>
+                <p>No eres solo un número de cuenta. Eres parte de una familia de 5,000+ desarrolladores que se apoyan mutuamente.</p>
+                <a href="certificaciones.html" class="btn-distingue">Comienza Tu Transformación Hoy</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ProgCert. Todos los derechos reservados.</p>
+            <p>Desarrollado por estdiantes de ISC 5°A</p>
+            <div class="redes">
+            <a href="https://www.instagram.com/progcert_?igsh=OHFwZHJ0MHMwM3Z4" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    </main>
+</body>
+</html>

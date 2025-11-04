@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</head>
+<body>
+    <main>
+    <!--Parte del header(seccion que tiene nuesttro nombre, logotipo, eslogan, etc)-->
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <a href="#inicio" class="logo">
+                    <div class="logo-icon">
+                         <img src="images/logo.png" alt="PC"> 
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">ProgCert</span>
+                        <span class="logo-slogan">Porgramador certificado, futuro asegurado</span>
+                    </div>
+                </a>
+            </div>
+            <!--Lista para mostrar las secciones de la pagina-->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="certificaciones.html"  class="active">Certificaciones</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="usuarioLogueado"></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <h1>Certificaciones disponibles</h1>
+
+    <section class="certificacion activa">
+        <h2>Certificación en Java</h2>
+        <p>Domina uno de los lenguajes más robustos y utilizados en el desarrollo empresarial. Mejora tu perfil profesional.</p>
+        <ul>
+        <li>Puntuación mínima: 70%</li>
+        <li>Tiempo límite: 40 minutos</li>
+        <li>Costo: $450 MXN</li>
+        </ul>
+        <button class="btn-pagar" onclick="pagar('java')">Pagar</button>
+        <button class="btn-iniciar" onclick="iniciarExamen('java')">Iniciar examen</button>
+        
+    </section>
+
+    <section class="certificacion inactiva">
+        <h2>Certificación en Node.js</h2>
+        <p>Aprende a construir servidores eficientes con JavaScript.</p>
+        <ul>
+        <li>Puntuación mínima: 70%</li>
+        <li>Tiempo límite: 60 minutos</li>
+        <li>Costo: $300 MXN</li>
+        </ul>
+        <button class="btn-pagar" disabled>Pagar</button>
+        <button class="btn-iniciar" disabled>Iniciar examen</button>
+        <p class="info-fecha">Disponible a partir del 15 de noviembre de 2025</p>
+    </section>
+
+    <section class="certificacion inactiva">
+        <h2>Certificación en HTML</h2>
+        <p>Crea estructuras web limpias, accesibles y bien organizadas. Ideal para desarrolladores frontend.</p>
+        <ul>
+        <li>Puntuación mínima: 75%</li>
+        <li>Tiempo límite: 30 minutos</li>
+        <li>Costo: $350 MXN</li>
+        </ul>
+        <button class="btn-pagar" disabled>Pagar</button>
+        <button class="btn-iniciar" disabled>Iniciar examen</button>
+        <p class="info-fecha">Disponible a partir del 2 de diciembre de 2025</p>
+    </section>
+
+    <section class="certificacion inactiva">
+        <h2>Certificación en Python</h2>
+        <p>Domina uno de los lenguajes mas demandados.</p>
+        <ul>
+        <li>Puntuacion minima: 70%</li>
+        <li>Tiempo limite: 50 minutos</li>
+        <li>Costo: $280 MXN</li>
+        </ul>
+        <button class="btn-pagar" disabled>Pagar</button>
+        <button class="btn-iniciar" disabled>Iniciar examen</button>
+        
+        <p class="info-fecha">Proximamente para 2026</p>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ProgCert. Todos los derechos reservados.</p>
+            <p>Desarrollado por estdiantes de ISC 5°A</p>
+            <div class="redes">
+            <a href="https://www.instagram.com/progcert_?igsh=OHFwZHJ0MHMwM3Z4" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    </main>
+</body>
+</html>

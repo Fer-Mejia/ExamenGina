@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</head>
+<body>
+    <main>
+    <!--Parte del header(seccion que tiene nuesttro nombre, logotipo, eslogan, etc)-->
+    <header id="header">
+        <nav>
+            <div class="logo-container">
+                <a href="#inicio" class="logo">
+                    <div class="logo-icon">
+                         <img src="images/logo.png" alt="PC"> 
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">ProgCert</span>
+                        <span class="logo-slogan">Porgramador certificado, futuro asegurado</span>
+                    </div>
+                </a>
+            </div>
+            <!--Lista para mostrar las secciones de la pagina-->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="certificaciones.html">Certificaciones</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li id="usuarioLogueado"></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <!--1 seccion de la bienvenida a la pagina-->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Certifica tus Conocimientos en Programacion</h1>
+            <p>Demuestra tu capacidad en programacion con nuestras certificaciones y muestrale al mundo de lo que eres capaz</p>
+            <a href="certificaciones.html" class="btn-certi">Ver Certificaciones</a>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Certificados Emitidos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Tecnologías</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Empleabilidad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--2 Seccion de especialidad nuestra-->
+    <section class="especialidad" id="espec">
+        <div class="especialidad-content">
+            <h1>Nuestra especialidad</h1>
+            <p>
+                Nosotros nos preocupamos por tu futuro y por eso nos especialisamos en preprarar futuros programadores en este mundo laboral siempre cambiante.
+
+            </p>
+            <p>Hemos certificado miles de programdores que actualemente son partes esenciales de las empresas donde trabajan</p>
+            <h2>Uno de nuestros logros y de nuestra comunidad</h2>
+
+            <div class="caso-imagen">
+                <img src="images/julian.jpg" alt="Julian Hernandez - Senior Developer en Microsoft">
+                <div class="caso-badge"> 🏆 Caso de Exito</div>
+            </div>
+
+            <div class="caso-info">
+                <h3>Julian Hernandez</h3>
+                <p class="cargo">Senior Software Engineer en Microsoft</p>
+                <p class="ubicacion">📍 Redmond, Washington</p>
+
+                <div class="caso-story">
+                    <p>
+                        Julian se certificó con nosotros en <strong>Java</strong> y <strong>Node.js</strong> en 2023. 
+                        Apenas 6 meses después de obtener sus certificaciones, fue contratado por Microsoft como 
+                        <strong>Software Engineer II</strong> en el equipo de Microsoft Teams.
+                    </p>
+                    <p>
+                        Hoy, Julian lidera un equipo de 8 desarrolladores trabajando en nuevas funcionalidades para 
+                        más de 300 millones de usuarios. Su historia es un testimonio del valor que las empresas 
+                        tecnológicas otorgan a las certificaciones de ProgCert.
+                    </p>
+                </div>
+
+                <div class="caso-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">6</span>
+                        <span class="stat-label">meses para el empleo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">3x</span>
+                        <span class="stat-label">aumento salarial</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">8</span>
+                        <span class="stat-label">devs en su equipo</span>
+                    </div>
+                </div>
+
+                <blockquote class="testimonio">
+                    <p>"Las certificaciones de ProgCert no solo validaron mis conocimientos técnicos, sino que mejoraron mi logica y conocimeinnto en programacion provocando una 
+                    confianza necesaria para aplicar a empresas de primer nivel. El contenido actualizado y las 
+                    prácticas reales fueron clave en mi preparación."</p>
+                    <cite>— Julian, Microsoft</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!--3 Seccion de login-->
+    <section class="login">
+        <h2>Iniciar sesión</h2>
+        <form id="loginForm">
+            <input type="text" id="cuenta" placeholder="Cuenta" required />
+            <input type="password" id="password" placeholder="Contraseña" required />
+            <button type="submit">Ingresar</button>
+        </form>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ProgCert. Todos los derechos reservados.</p>
+            <p>Desarrollado por estdiantes de ISC 5°A</p>
+            <div class="redes">
+            <a href="https://www.instagram.com/progcert_?igsh=OHFwZHJ0MHMwM3Z4" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    </main>
+</body>
+</html>
